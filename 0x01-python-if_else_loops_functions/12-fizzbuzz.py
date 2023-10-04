@@ -10,4 +10,4 @@ def fizzbuzz():
             out = out + 'Buzz '
         else:
             out = out + f'{i} '
-    print(out)
+    print(out, end='')
