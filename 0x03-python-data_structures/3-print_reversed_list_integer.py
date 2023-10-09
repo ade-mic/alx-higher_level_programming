@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 def print_reversed_list_integer(my_list=[]):
     if len(my_list) == 0:
-        print('None')
+        print(''.format('None'))
     last_idx = len(my_list) - 1
     while last_idx >= 0:
         print('{:d}'.format(my_list[last_idx]))
