@@ -14,4 +14,5 @@ def magic_calculation(a, b):
     result = result + a + b
     return result
 
+
 dis.dis(magic_calculation)
