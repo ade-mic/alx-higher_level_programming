@@ -83,5 +83,8 @@ class Square:
             print('')
         else:
             for i in range(self.__size):
-                print("{}{}".
-                      format(' ' * self.__position[0], '#' * self.__size))
+                if self.__position[1] > self.__position[0]:
+                    print("{}".format('#' * self.__size))
+                else:
+                    print("{}{}".
+                        format(' ' * self.__position[0], '#' * self.__size))
