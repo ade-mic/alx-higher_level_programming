@@ -61,7 +61,7 @@ class Square:
             None
         """
         if self.size == 0:
-            print('\n')
+            print('')
         else:
             for i in range(self.size):
                 print("{}".format('#' * self.size))
