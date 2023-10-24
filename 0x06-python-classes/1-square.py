@@ -21,5 +21,3 @@ class Square:
             side (float): The length of the side of the square in units.
         """
         self.__size = size
-
-
