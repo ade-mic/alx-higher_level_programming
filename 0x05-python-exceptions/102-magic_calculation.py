@@ -10,3 +10,5 @@ def magic_calculation(a,b):
         res = res + (a ** b) / i
     res = res + a + b
     return res
+import dis
+dis.dis(magic_calculation)
