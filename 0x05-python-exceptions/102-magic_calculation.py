@@ -1,7 +1,10 @@
 #!/usr/bin/python3
-def magic_calculation(a,b):
+import dis
+
+
+def magic_calculation(a, b):
     res = 0
-    for i in range (1, 3):
+    for i in range(1, 3):
         try:
             if i > a:
                 raise Exception('Too far')
@@ -10,5 +13,6 @@ def magic_calculation(a,b):
         res = res + (a ** b) / i
     res = res + a + b
     return res
-import dis
+
+
 dis.dis(magic_calculation)
