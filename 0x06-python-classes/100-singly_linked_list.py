@@ -21,12 +21,12 @@ class Node:
         """The constructor for Node class"""
         self.__data = data
         self.__next_node = next_node
-    
+
     @property
     def data(self):
         """Retrieve value of data"""
         return self.__data
-    
+
     @data.setter
     def data(self, value):
         """Set the value of data"""
@@ -34,12 +34,12 @@ class Node:
             self.__data = value
         else:
             raise TypeError("data must be an integer")
-    
+
     @property
     def next_node(self):
         """Retrieve value of next_node"""
         return self.__next_node
-    
+
     @next_node.setter
     def next_node(self, value):
         """Set the value of next_node"""
@@ -85,7 +85,7 @@ class SinglyLinkedList:
         """
         Return a strinf representation of the linked list
 
-        Returns: 
+        Returns:
             str: A string containing one node number per line.
         """
         result = ""
