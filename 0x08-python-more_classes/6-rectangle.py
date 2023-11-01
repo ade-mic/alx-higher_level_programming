@@ -9,6 +9,7 @@ class Rectangle:
     rectangular shape with width and height
     """
     number_of_instances = 0
+
     def __init__(self, width=0, height=0):
         """__init__ initialize the class with a
         width and height
