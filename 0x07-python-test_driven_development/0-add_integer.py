@@ -2,21 +2,14 @@
 """ Add intergers
 Prototype: def add_integer(a, b=98):
 a and b must be integers or floats, otherwise raise a TypeError exception with
-the message a must be an integer or b must be an integer 
+the message a must be an integer or b must be an integer
 """
 
 
 def add_integer(a, b=98):
-    """ add_integers
-    Args:
+    """ add_integers    Args:
         a(int): first paramter
-        b(int): second parameter
-
-    Returns:
-        int: the sum of a and b
-    Raises:
-        Typerror: if a or b not int or float
-    """
+        b(int): second parameter"""
     if not isinstance(a, int):
         if isinstance(a, float):
             a = int(a)
