@@ -7,6 +7,9 @@ Prototype: def text_indentation(text):
 
 
 def text_indentation(text):
+    """def text_indentation
+        Args(str)
+    """
     if not isinstance(text, str):
         raise TypeError('text must be a string')
     line = text.split(".")
