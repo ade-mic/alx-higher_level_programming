@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """
 a function that prints My name is <first name> <last name>
 Prototype: def say_my_name(first_name, last_name=""):
