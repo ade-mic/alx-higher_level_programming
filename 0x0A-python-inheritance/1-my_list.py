@@ -2,7 +2,8 @@
 """
  a class MyList that inherits from list:
 
-Public instance method: def print_sorted(self): that prints the list, but sorted (ascending sort)
+Public instance method: def print_sorted(self):
+that prints the list, but sorted (ascending sort)
 You can assume that all the elements of the list will be of type int
 """
 
@@ -10,7 +11,7 @@ You can assume that all the elements of the list will be of type int
 class MyList(list):
     """
     iherits from the list class or type
-    Args: 
+    Args:
         list (list)
     Methods:
         prints_sorted: prints the list in ascending order
