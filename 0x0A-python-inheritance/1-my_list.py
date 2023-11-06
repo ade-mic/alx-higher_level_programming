@@ -22,4 +22,4 @@ def print_sorted(self, listItem):
         self (list)
         listItem (list): integers to be printed in sorted array
     """
-    item = listItem[:].sorted()
+    item = listItem[:].sort()
