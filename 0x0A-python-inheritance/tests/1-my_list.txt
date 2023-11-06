@@ -1,6 +1,6 @@
-MyList = __import__('1-my_list').MyList
-my_list = MyList()
-my_list = MyList([5, 2, 8, 1, 3])
+>>> MyList = __import__('1-my_list').MyList
+>>> my_list = MyList()
+>>> my_list = MyList([5, 2, 8, 1, 3])
 >>> my_list.append(20)
 >>> my_list.append(15)
 >>> print(my_list)
