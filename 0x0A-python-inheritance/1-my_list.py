@@ -7,7 +7,7 @@ You can assume that all the elements of the list will be of type int
 """
 
 
-class myList(list):
+class MyList(list):
     """
     iherits from the list class or type
     Args: 
@@ -15,11 +15,13 @@ class myList(list):
     Methods:
         prints_sorted: prints the list in ascending order
     """
-def print_sorted(self, listItem):
-    """
-    prints the list in ascending order
-    Args:
-        self (list)
-        listItem (list): integers to be printed in sorted array
-    """
-    item = listItem[:].sort()
+
+    def print_sorted(self):
+        """
+        prints the list in ascending order
+        Args:
+            self (list)
+            listItem (list): integers to be printed in sorted array
+        """
+        sorted_list = sorted(self)
+        print(sorted_list)
