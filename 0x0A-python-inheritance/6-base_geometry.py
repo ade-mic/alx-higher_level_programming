@@ -8,15 +8,14 @@ class BaseGeometry:
     """
     Method:
         area(self)
-    Attribute: 
+    Attribute:
         None
     """
-    
 
     def area(self):
         """
         Nothing implemeted yet
-        Return: 
+        Return:
             string: area() is not implemented
         """
-        return "area() is not implemented"
+        raise Exception("area() is not implemented")
