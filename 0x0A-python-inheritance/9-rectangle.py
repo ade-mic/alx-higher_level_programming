@@ -22,7 +22,7 @@ class Rectangle(BaseGeometry):
         super().integer_validator('height', height)
 
     def __str__(self):
-        return "[{}] {}/{}".format(self.__class__.__name__,
+        return "[{}] {}/{}".format(__class__.__name__,
                                    self.__width, self.__height)
 
     def area(self):
