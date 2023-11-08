@@ -6,7 +6,7 @@ Prototype: def load_from_json_file(filename):
 """
 
 
-def load_from_json_file(my_obj, filename):
+def load_from_json_file(filename):
     """
     This fuction load JSON file and create an object
     Args:
@@ -16,4 +16,5 @@ def load_from_json_file(my_obj, filename):
     import json
     # open filename for writing
     with open(filename) as a_file:
-        return json.load(a_file)
+        obj_file = json.load(a_file)
+    
