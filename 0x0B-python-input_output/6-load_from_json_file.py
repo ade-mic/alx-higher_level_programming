@@ -17,4 +17,4 @@ def load_from_json_file(filename):
     # open filename for writing
     with open(filename) as a_file:
         obj_file = json.load(a_file)
-    
+    return obj_file
