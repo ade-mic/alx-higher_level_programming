@@ -8,7 +8,7 @@ Prototype: def append_write(filename="", text="")::
 
 def append_write(filename="", text=""):
     """
-    a function that writes a string to a text file (UTF8)
+    a function that appends a string to a text file (UTF8)
     and returns the number of characters written:
     Args:
         filename(directory or filepath)
