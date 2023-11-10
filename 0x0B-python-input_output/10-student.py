@@ -26,7 +26,7 @@ class Student:
         self.last_name = last_name
         self.age = age
 
-    def to_json(self, attrs =None):
+    def to_json(self, attrs=None):
         """
         This method returns the dictionary discription
         with simple data structure for JSON serialization
