@@ -25,7 +25,7 @@ def class_to_json(obj):
     # iterate iver the object's attributes
     for attr in dir(obj):
         # if attribute is private or special attributes
-        if attr.startswith('_'):
+        if attr.startswith('_') and attr.endswith('_'):
             continue
         # get the value of the attribute
         value = getattr(obj, attr)
