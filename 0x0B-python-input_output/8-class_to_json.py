@@ -17,8 +17,8 @@ def class_to_json(obj):
     Returns:
         A dictionary
     """
-    #check if the object id already a simple data structure
-    if isinstance(obj, (list, dict, str, int, bool, type(None))):
+    # check if the object id already a simple data structure
+    if isinstance(obj, (list, dict, str, int, bool, float, type(None))):
         return obj
     # otherwise
     result = {}
@@ -38,4 +38,3 @@ def class_to_json(obj):
         result[attr] = value
     # return dictionary
     return result
-
