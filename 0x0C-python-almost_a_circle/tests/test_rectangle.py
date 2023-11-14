@@ -1,16 +1,8 @@
 import unittest
 from models.rectangle import Rectangle
 class TestRectangle(unittest.TestCase):
-    def TestClassInit(self):
-        r1 = Rectangle(10, 2)
-        r2 = Rectangle(2, 10)
-        r3 = Rectangle(10, 2, 0, 0, 12)
-
-        self.assertEqual(r1.id, 1)
-        self.assertEqual(r2.id, 2)
-        self.assertEqual(r3.id, 12)
     
-    def TestGetters(self):
+    def test_getter(self):
         r1 = Rectangle(10, 2)
         r2 = Rectangle(2, 10)
         r3 = Rectangle(10, 2, 0, 0, 12)
@@ -28,14 +20,17 @@ class TestRectangle(unittest.TestCase):
         self.assertEqual(r3.x, 0)
         self.assertEqual(r3.y, 0)
 
-    def TestGetters(self):
+    def test_setter(self):
         r1 = Rectangle(10, 2)
         r2 =  Rectangle(10, 2, 2, 4, 12)
-        self.assertEqual(r1.width(8), r1.width)
-        self.assertEqual(r1.x, 2)
-        self.assertEqual(r1.y, 4)
-        self.assertEqual(r2.x(8), r1.x)
-        self.assertEqual(r2.y(8), r1.y)
+        r1.width = 8
+        self.assertEqual(r1.width, 8)
+        self.assertEqual(r2.x, 2)
+        self.assertEqual(r2.y, 4)
+        r2.x = 8
+        self.assertEqual(8, r2.x)
+        r2.y = 8
+        self.assertEqual(8, r2.y)
 
 
 if __name__ == '__main__':
