@@ -74,5 +74,5 @@ class Base:
         """
         # creates a new instance without calling __init__
         dummy = cls.__new__(cls)
-        dummy.update(**dictionary)
+        dummy.update(*dictionary)
         return dummy
