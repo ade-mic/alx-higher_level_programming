@@ -132,7 +132,7 @@ class Rectangle (Base):
             self(Rectangle instance)
         """
         return self.__height * self.__width
-    
+
     def display(self):
         """
         prints out to the stdout the Rectangle instance with
