@@ -155,7 +155,7 @@ class Rectangle (Base):
                                                 self.id, self.__x, self.__y,
                                                 self.__width, self.__height)
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         """
         Public method assigns an position arguement to each attrubute
         Args:
@@ -165,23 +165,36 @@ class Rectangle (Base):
             4th argument should be the x attribute
             5th argument should be the y attribute
          """
-        if len(args) == 1:
-            self.id = args[0]
-        elif len(args) == 2:
-            self.id = args[0]
-            self.__width = args[1]
-        elif len(args) == 3:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-        elif len(args) == 4:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-        else:
-            self.id = args[0]
-            self.__width = args[1]
-            self.__height = args[2]
-            self.__x = args[3]
-            self.__y = args[4]
+        if kwargs:
+            for key, value in kwargs.items():
+                if key == 'width':
+                    self.__width = value
+                elif key == 'height':
+                    self.__height = value
+                elif key == 'x':
+                    self.__x = value
+                elif key == 'y':
+                    self.__y = value
+                elif key == 'id':
+                    self.id = value
+        if args:
+            if len(args) == 1:
+                self.id = args[0]
+            elif len(args) == 2:
+                self.id = args[0]
+                self.__width = args[1]
+            elif len(args) == 3:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+            elif len(args) == 4:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+            else:
+                self.id = args[0]
+                self.__width = args[1]
+                self.__height = args[2]
+                self.__x = args[3]
+                self.__y = args[4]
