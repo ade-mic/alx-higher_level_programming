@@ -137,8 +137,8 @@ class Rectangle (Base):
         """
         prints out to the stdout the Rectangle instance with
         character #
-        Args: 
+        Args:
             self(instance of Rectangle)
         """
         for i in range(self.__height):
-            print('#'*self.__width)   
+            print('#'*self.__width)
