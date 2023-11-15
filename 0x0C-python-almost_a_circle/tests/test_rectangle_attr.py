@@ -45,3 +45,25 @@ class TestRectangleAtrr(unittest.TestCase):
         self.assertEqual(r.y, 0)
         r.y = 6
         self.assertEqual(r.y, 6)
+    
+    def test_set_area(self):
+        r = Rectangle(2, 4)
+        r_area = r.area()
+        self.assertEqual(r_area, 8)
+        r2 = Rectangle(2, 10)
+        r2_area = r2.area()
+        self.assertEqual(r2_area, 20)
+        r3 = Rectangle(8, 7, 0, 0, 12)
+        r3_area = r3.area()
+        self.assertEqual(r3_area, 56)
+
+    def display(self):
+        """
+        prints out to the stdout the Rectangle instance with
+        character #
+        Args: 
+            self(instance of Rectangle)
+        """
+        for i in range(self.__height):
+            print('#'*self.__width)
+
