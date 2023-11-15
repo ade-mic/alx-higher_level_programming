@@ -2,7 +2,6 @@
 """
 This file contains a class name Base
 """
-import json
 
 
 class Base:
@@ -26,6 +25,7 @@ class Base:
             self.id = type(self).__nb_objects
 
     def to_json_string(list_dictionaries):
+        import json
         """
         Args:
             list_dictionaries (list of dictionaries)
