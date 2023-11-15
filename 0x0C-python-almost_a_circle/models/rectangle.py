@@ -154,3 +154,34 @@ class Rectangle (Base):
         return '[{}] ({}) {}/{} - {}/{}'.format(type(self).__name__,
                                                 self.id, self.__x, self.__y,
                                                 self.__width, self.__height)
+
+    def update(self, *args):
+        """
+        Public method assigns an position arguement to each attrubute
+        Args:
+            1st argument should be the id attribute
+            2nd argument should be the width attribute
+            3rd argument should be the height attribute
+            4th argument should be the x attribute
+            5th argument should be the y attribute
+         """
+        if len(args) == 1:
+            self.id = args[0]
+        elif len(args) == 2:
+            self.id = args[0]
+            self.__width = args[1]
+        elif len(args) == 3:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+        elif len(args) == 4:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+        else:
+            self.id = args[0]
+            self.__width = args[1]
+            self.__height = args[2]
+            self.__x = args[3]
+            self.__y = args[4]
