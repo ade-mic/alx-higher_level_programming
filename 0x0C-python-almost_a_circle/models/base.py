@@ -2,6 +2,7 @@
 """
 This file contains a class name Base
 """
+import json
 
 
 class Base:
@@ -33,7 +34,6 @@ class Base:
             JSON string representation of list_dictionarie
             If list_dictionaries is None or empty, return the string: "[]"
         """
-        import json
         if list_dictionaries is None:
             return '[]'
         elif len(list_dictionaries) == 0:
@@ -56,3 +56,13 @@ class Base:
             else:
                 list_dicts = [obj.to_dictionary() for obj in list_objs]
                 file.write(cls.to_json_string(list_dicts))
+
+    @staticmethod
+    def from_json_string(json_string):
+        """
+        returns the list of the JSON string representation
+        """
+        if json_string is None or json_string == '[]':
+            return []
+        else:
+            return json.loads(json_string)
