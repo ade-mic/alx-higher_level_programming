@@ -1,4 +1,6 @@
 import unittest
+from io import StringIO
+from contextlib import redirect_stdout
 from models.rectangle import Rectangle
 
 
@@ -56,14 +58,12 @@ class TestRectangleAtrr(unittest.TestCase):
         r3 = Rectangle(8, 7, 0, 0, 12)
         r3_area = r3.area()
         self.assertEqual(r3_area, 56)
-
-    def display(self):
-        """
-        prints out to the stdout the Rectangle instance with
-        character #
-        Args: 
-            self(instance of Rectangle)
-        """
-        for i in range(self.__height):
-            print('#'*self.__width)
-
+    
+    def test_display(self):
+        r = Rectangle(2, 3)
+        expected_output = '##\n##\n##\n'
+        with StringIO() as buffer, redirect_stdout(buffer):
+            r.display() 
+            self.assertEqual(buffer.getvalue(), expected_output)
+    
+    
