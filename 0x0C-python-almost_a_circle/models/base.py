@@ -39,4 +39,8 @@ class Base:
         elif len(list_dictionaries) == 0:
             return '[]'
         else:
-            return json.dumps(list_dictionaries)
+            for i in list_dictionaries:
+                if isinstance(i, dict):               
+                    return json.dumps(list_dictionaries)
+                else:
+                    raise TypeError('list_dictionaries must be a list of dictionaries')
