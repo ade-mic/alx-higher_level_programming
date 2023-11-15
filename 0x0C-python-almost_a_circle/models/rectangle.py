@@ -204,7 +204,7 @@ class Rectangle (Base):
         Returns the dictionary representation of a
         Rectangle instance
         """
-        return {'id' : self.id,
+        return {'id': self.id,
                 'width': self.__width,
                 'height': self.__height,
                 'x': self.__x,
