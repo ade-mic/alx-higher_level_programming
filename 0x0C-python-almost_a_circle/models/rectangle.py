@@ -64,12 +64,11 @@ class Rectangle (Base):
         """
         set the attribute value of width
         """
-        if value <= 0:
-            raise ValueError('width must be greater > 0')
         if not isinstance(value, int):
             raise TypeError('width must be an integer')
+        if value <= 0:
+            raise ValueError('width must be greater > 0')
         self.__width = value
-
     @property
     def height(self):
         """
@@ -82,10 +81,10 @@ class Rectangle (Base):
         """
         set the attribute value of height
         """
-        if value <= 0:
-            raise ValueError('height must be greater > 0')
         if not isinstance(value, int):
             raise TypeError('height must be an integer')
+        if value <= 0:
+            raise ValueError('height must be greater > 0')
         self.__height = value
 
     @property
