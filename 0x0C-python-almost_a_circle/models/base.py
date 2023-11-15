@@ -34,10 +34,12 @@ class Base:
             If list_dictionaries is None or empty, return the string: "[]"
         """
         import json
-        if list_dictionaries is None:
+        filtered_list = [d
+                         for d in list_dictionaries
+                         if isinstance(d, dict)]
+        if filtered_list is None:
             return '[]'
-        elif len(list_dictionaries) == 0:
+        elif len(filtered_list) == 0:
             return '[]'
         else:
-            filtered_list = [d for d in list_dictionaries if isinstance(d, dict)]
             return json.dumps(filtered_list)
