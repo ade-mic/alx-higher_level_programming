@@ -31,11 +31,24 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
+    """
+    set the value of size
+    """
     def size(self, value):
         self.width = value
         self.height = value
 
     def update(self, *args, **kwargs):
+        """
+        Updates the trribute of the class of square
+        Args:
+            *args positional arguement
+            1st argument should be the id attribute
+            2nd argument should be the size attribute
+            3rd argument should be the x attribute
+            4th argument should be the y attribute
+        Kwargs - key word arguements(optional):
+        """
         if args:
             if len(args) == 1:
                 self.id = args[0]
