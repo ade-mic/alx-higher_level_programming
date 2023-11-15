@@ -100,10 +100,11 @@ class Rectangle (Base):
         """
         set the attribute value of x
         """
-        if value < 0:
-            raise ValueError('x must be greater >= 0')
         if not isinstance(value, int):
             raise TypeError('x must be an integer')
+        if value < 0:
+            raise ValueError('x must be greater >= 0')
+
         self.__x = value
 
     @property
@@ -118,8 +119,8 @@ class Rectangle (Base):
         """
         set the attribute value of y
         """
-        if value < 0:
-            raise ValueError('y must be greater >= 0')
         if not isinstance(value, int):
             raise TypeError('y must be an integer')
+        if value < 0:
+            raise ValueError('y must be greater >= 0')
         self.__y = value
