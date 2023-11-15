@@ -25,7 +25,6 @@ class Base:
             self.id = type(self).__nb_objects
 
     def to_json_string(list_dictionaries):
-        import json
         """
         Args:
             list_dictionaries (list of dictionaries)
@@ -33,6 +32,7 @@ class Base:
             JSON string representation of list_dictionarie
             If list_dictionaries is None or empty, return the string: "[]"
         """
+        import json
         if len(list_dictionaries) == 0 or list_dictionaries is None:
             return '[]'
         else:
