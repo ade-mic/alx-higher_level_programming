@@ -145,7 +145,7 @@ class Rectangle (Base):
             if print_y:
                 print('\n' * self.__y, end='')
                 print_y = False
-            print('{}{}'.format(' '*self.__width,  '#' * self.__width))
+            print('{}{}'.format(' '*self.__x,  '#' * self.__width))
 
     def __str__(self):
         """
