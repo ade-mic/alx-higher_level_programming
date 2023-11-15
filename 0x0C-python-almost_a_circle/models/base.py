@@ -40,7 +40,7 @@ class Base:
             return '[]'
         else:
             for i in list_dictionaries:
-                if isinstance(i, dict):               
-                    return json.dumps(list_dictionaries)
-                else:
-                    raise TypeError('list_dictionaries must be a list of dictionaries')
+                if not isinstance(i, dict):
+                    raise TypeError('list_dictionaries must be a\
+                                     list of dictionaries')
+            return json.dumps(list_dictionaries)
