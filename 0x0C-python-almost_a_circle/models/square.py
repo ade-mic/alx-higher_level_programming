@@ -45,12 +45,8 @@ class Square(Rectangle):
         """
         Updates the trribute of the class of square
         Args:
-            *args positional arguement
-            1st argument should be the id attribute
-            2nd argument should be the size attribute
-            3rd argument should be the x attribute
-            4th argument should be the y attribute
-        Kwargs - key word arguements(optional):
+            *args positional arguement: (id size, x  y )
+            Kwargs - key word arguements(optional):(id=id size=size, x=x  y=y)
         """
         if args:
             if len(args) == 1:
