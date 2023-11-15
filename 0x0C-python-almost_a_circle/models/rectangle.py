@@ -140,8 +140,12 @@ class Rectangle (Base):
         Args:
             self(instance of Rectangle)
         """
+        print_y = True
         for i in range(self.__height):
-            print('#'*self.__width)
+            if print_y:
+                print('\n' * self.__y, end='')
+                print_y = False
+            print('{}{}'.format(' '*self.__width,  '#' * self.__width))
 
     def __str__(self):
         """
