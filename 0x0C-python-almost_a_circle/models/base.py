@@ -34,9 +34,9 @@ class Base:
             If list_dictionaries is None or empty, return the string: "[]"
         """
         import json
-        if len(list_dictionaries) == 0:
+        if list_dictionaries is None:
             return '[]'
-        elif list_dictionaries is None:
+        elif len(list_dictionaries) == 0:
             return '[]'
         else:
             return json.dumps(list_dictionaries)
