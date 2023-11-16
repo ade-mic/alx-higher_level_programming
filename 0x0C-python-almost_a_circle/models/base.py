@@ -74,7 +74,7 @@ class Base:
         returns an instance with all already set
         """
         # creates a new instance without calling __init__
-        dummy = cls.__call__(1, 1)
+        dummy = cls(1, 1)
         dummy.update(**dictionary)
         return dummy
 
