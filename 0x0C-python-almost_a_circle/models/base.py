@@ -85,11 +85,10 @@ class Base:
         """
         filename = cls.__name__ + '.json'
         if not os.path.exists(filename):
-                return []
+            return []
         with open(filename, 'r', encoding='utf-8') as file:
             with open(filename, 'r') as file:
                 # json_string = json.load(file)
                 data = cls.from_json_string(file.read())
                 instances = [cls.create(**i_data) for i_data in data]
                 return instances
-   
