@@ -3,6 +3,7 @@
 This file contains a class name Base
 """
 import json
+import os.path
 
 
 class Base:
@@ -73,6 +74,22 @@ class Base:
         returns an instance with all already set
         """
         # creates a new instance without calling __init__
-        dummy = cls(1, 1)
+        dummy = cls.__call__(1, 1)
         dummy.update(**dictionary)
         return dummy
+
+    @classmethod
+    def load_from_file(cls):
+        """
+        returns a list of instances
+        """
+        filename = cls.__name__ + '.json'
+        with open(filename, 'r', encoding='utf-8') as file:
+            if not os.path.exists(filename):
+                return []
+            else:
+                with open(filename, 'r') as file:
+                    # json_string = json.load(file)
+                    data = cls.from_json_string(file.read())
+                    instances = [cls.create(**i_data) for i_data in data]
+                    return instances
