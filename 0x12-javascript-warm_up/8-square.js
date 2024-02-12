@@ -6,7 +6,7 @@ if (isNaN(size) || size === undefined) {
   const width = size;
   let height = size;
   while (height > 0) {
-    console.log('x'.repeat(width));
+    console.log('X'.repeat(width));
     height--;
   }
 }
