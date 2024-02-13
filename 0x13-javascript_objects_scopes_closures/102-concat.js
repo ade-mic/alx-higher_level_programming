@@ -7,7 +7,7 @@ fs.readFile(fileA, 'utf8', (err, dataA) => {
   fs.readFile(fileB, 'utf8', (err, dataB) => {
     if (err) throw err;
     fs.writeFile(fileC, dataA + '\n' + dataB + '\n', (err) => {
-	    if (err) throw err;
+      if (err) throw err;
     });
   });
 });
