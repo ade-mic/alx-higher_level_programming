@@ -16,6 +16,16 @@ def main():
     """
     # Define a class that representsthe State table
     class State(Base):
+        """
+        State class:
+        inherits from Base Tips
+        links to the MySQL table states
+        class attribute:
+              (id): that represents a column of an auto-generated,
+                unique integer, can’t be null and is a primary key
+              (name) that represents a column of a
+                    string with maximum 128 characters and can’t be null
+        """
         # specify the table name and engine
         __tablename__ = 'states'
         __table_args__ = {'mysql_engine': 'InnoDB'}
