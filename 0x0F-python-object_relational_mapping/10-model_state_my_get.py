@@ -25,7 +25,7 @@ def main():
         .order_by(State.id).all()
     if not states:
         print("Not found", end="\n")
-    else:    
+    else:
         for state in states:
             if state is None or state == "":
                 print("Not found", end="\n")
