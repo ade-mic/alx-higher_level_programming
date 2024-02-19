@@ -15,7 +15,7 @@ def main():
     db = MySQLdb.connect(user=argv[1], password=argv[2],
                          host='localhost', port=3306, database=argv[3])
     cursor = db.cursor()
-    sql = "SELECT * FROM states WHERE name='{}'\
+    sql = "SELECT * FROM states WHERE REGEXP_LIKE(name, '{}', 'c')\
         ORDER BY states.id ASC".format(argv[4])
     cursor.execute(sql)
     rows = cursor.fetchall()
