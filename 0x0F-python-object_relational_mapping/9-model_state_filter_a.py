@@ -20,8 +20,8 @@ def main():
     session = Session()
     # Query the table and print result
     states = session.query(State)\
-                   .filter(State.name.contains('a'))\
-                   .order_by(State.id).all()
+        .filter(State.name.contains('a'))\
+        .order_by(State.id).all()
     for state in states:
         print("{}: {}".format(state.id, state.name))
 
