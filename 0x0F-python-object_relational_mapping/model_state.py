@@ -10,12 +10,13 @@ from sqlalchemy.ext.declarative import declarative_base
 from sys import argv
 
 
- # Define a class that representsthe State table
-
-# create a base class that contains the metadata and a constructor
+# Define a class that representsthe State table
 Base = declarative_base()
+
+
 class State(Base):
     """
+    A base class that contains the metadata and a constructor
     State class:
     inherits from Base Tips
     links to the MySQL table states
@@ -25,7 +26,7 @@ class State(Base):
         (name) that represents a column of a
             string with maximum 128 characters and can’t be null
     """
-        # specify the table name and engine
+    # specify the table name and engine
     __tablename__ = 'states'
     __table_args__ = {'mysql_engine': 'InnoDB'}
 
@@ -33,12 +34,12 @@ class State(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(128))
 
-        
     def __init__(self, name):
         """
         Define a constructor that accepts the column values as arguements
         """
         self.name = name
+
 
 if __name__ == "main":
     # Create an engine that connects to the MySQL database
