@@ -40,9 +40,9 @@ class State(Base):
         """
         self.name = name
 
-
+if __name__ == "main":
     # Create an engine that connects to the MySQL database
-engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
-        argv[1], argv[2], argv[3], pool_preping=True))
-# Create the table in the database
-Base.metadata.create_all(engine)
+    engine = create_engine('mysql+mysqldb://{}:{}@localhost/{}'.format(
+            argv[1], argv[2], argv[3], pool_preping=True))
+    # Create the table in the database
+    Base.metadata.create_all(engine)
