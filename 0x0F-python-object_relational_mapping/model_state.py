@@ -33,8 +33,11 @@ class State(Base):
     id = Column(Integer, primary_key=True)
     name = Column(String(128))
 
-        # Define a constructor that accepts the column values as arguements
+        
     def __init__(self, name):
+        """
+        Define a constructor that accepts the column values as arguements
+        """
         self.name = name
 
 
