@@ -23,11 +23,14 @@ def main():
     states = session.query(State)\
         .filter(State.name == argv[4])\
         .order_by(State.id).all()
-    if states is None or states == "":
-        print("Not found")
-    else:
+    if not states:
+        print("Not found", end="\n")
+    else:    
         for state in states:
-            print("{}".format(state.id))
+            if state is None or state == "":
+                print("Not found", end="\n")
+            else:
+                print("{}".format(state.id))
 
 
 if __name__ == "__main__":
