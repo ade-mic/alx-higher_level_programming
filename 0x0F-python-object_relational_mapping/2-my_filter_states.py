@@ -5,13 +5,21 @@ This script list all state wth a name starting where name matches arguement prov
 import MySQLdb
 from sys import argv
 
-db = MySQLdb.connect(user=argv[1], password=argv[2],
-                     host='localhost', port=3306,
-                     database=argv[3])
-cursor = db.cursor()
-sql = "SELECT * FROM states WHERE name='" + argv[4] + "' ORDER BY states.id ASC"
-#val = (argv[4],)
-cursor.execute(sql)
-rows = cursor.fetchall()
-for row in rows:
-    print(row)
+
+def main():
+    """
+    Program Entrance
+    """
+    db = MySQLdb.connect(user=argv[1], password=argv[2],
+                         host='localhost', port=3306, database=argv[3])
+    cursor = db.cursor()
+    sql = "SELECT * FROM states WHERE name='" + argv[4] + "' ORDER BY states.id ASC"
+    #val = (argv[4],)
+    cursor.execute(sql)
+    rows = cursor.fetchall()
+    for row in rows:
+        print(row)
+
+
+if __name__ == "__main__":
+    main()
