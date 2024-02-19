@@ -20,7 +20,7 @@ def main():
     session = Session()
     # Query the table and print result
     state = session.query(State).first()
-    if state is None:
+    if state is None or state == None:
         print("Nothing\n")
     else:
         print("{}: {}".format(state.id, state.name))
