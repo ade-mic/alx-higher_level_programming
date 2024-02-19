@@ -21,7 +21,7 @@ def main():
     # Query the table and print result
     states = session.query(State).all()
     for state in states:
-        print(state.id, state.name)
+        print("{}: {}".format(state.id, state.name))
 
 
 if __name__ == "__main__":
