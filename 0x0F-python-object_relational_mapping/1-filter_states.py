@@ -13,10 +13,9 @@ def main():
     db = MySQLdb.connect(user=argv[1], password=argv[2],
                          host='localhost', port=3306, database=argv[3])
     cursor = db.cursor()
-    sql = "SELECT * FROM states WHERE UPPER(name)\
-        LIKE %s ORDER BY states.id ASC"
-    val = ("N%",)
-    cursor.execute(sql, val)
+    sql = "SELECT * FROM states WHERE REGEXP_LIKE(name, '^N', 'c') ORDER BY states.id ASC"
+    #val = ("n%",)
+    cursor.execute(sql,)
     rows = cursor.fetchall()
     for row in rows:
         print(row)
