@@ -21,7 +21,7 @@ def main():
     # Query the table and print result
     state = session.query(State).first()
     if state is None or state == "":
-        print("Nothing\n")
+        print("Nothing", end='\n')
     else:
         print("{}: {}".format(state.id, state.name))
 
