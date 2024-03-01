@@ -10,8 +10,10 @@ import os
 
 
 def main():
-    """ Main fuction to not allow the code be executed
-    when imported """
+    """
+    main fuction to not allow the code be executed
+    when imported
+    """
     req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
     with urllib.request.urlopen(req) as response:
         x_request_id = response.getheader("X-Request-Id")
