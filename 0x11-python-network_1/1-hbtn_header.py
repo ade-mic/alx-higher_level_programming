@@ -5,13 +5,13 @@ sends a request to the URL and displays
 the value of the X-Request-Id variable found
 in the header of the response.
 """
+import urllib.request
+import os
 
 
 def main():
     """ Main fuction to not allow the code be executed
     when imported """
-    import urllib.request
-    import os
     req = urllib.request.Request('https://alx-intranet.hbtn.io/status')
     with urllib.request.urlopen(req) as response:
         x_request_id = response.getheader("X-Request-Id")
