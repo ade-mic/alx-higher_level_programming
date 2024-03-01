@@ -24,11 +24,3 @@ def find_peak(arr):
             high = mid - 1
 
     return None  # No peak found
-
-# Example usage
-arr = [1, 3, 20, 4, 1, 0]
-result = find_peak(arr)
-if result is not None:
-    print(f"Peak element: {result}")
-else:
-    print("No peak element found.")
