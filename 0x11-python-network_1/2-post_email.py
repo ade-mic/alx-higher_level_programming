@@ -5,7 +5,8 @@ sends a POST request to the passed URL with the email
 as a parameter, and displays the body of the response
 (decoded in utf-8)
 """
-import urllib
+import urllib.parse
+import urllib.request
 from sys import argv
 
 
