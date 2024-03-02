@@ -13,23 +13,24 @@ def main():
     main fuction to not allow the code be executed
     when imported
     """
-    if len(argv) > 1:
-        params = {'q': argv[1]}
+    if len(argv) >= 1:
+        q = argv[1] if argv[1] else ""
     else:
         params = {'q': ""}
     # Send a POST request
     base_url = "http://0.0.0.0:5000/search_user"
-    response = requests.post(base_url, params=params)
+    response = requests.post(base_url, {'q' : q})
 
     # Check if the response is valid JSON
     try:
         data = response.json()
-        if data != "":
-            print("{} {}".format(data['id'], data['name']))
+        if data:
+            print("{} {}".format(data.get('id'), data.get('name')))
         else:
              print("No result")
-    except:
+    except ValueError:
          print("Not a valid JSON")
+
 
 if __name__ == "__main__":
     main()
