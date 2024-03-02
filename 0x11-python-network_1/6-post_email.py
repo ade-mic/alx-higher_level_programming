@@ -8,6 +8,7 @@ as a parameter, and displays the body of the response
 import requests
 from sys import argv
 
+
 def main():
     """
     main fuction to not allow the code be executed
