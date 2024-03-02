@@ -19,7 +19,7 @@ def main():
         params = {'q': ""}
     # Send a POST request
     base_url = "http://0.0.0.0:5000/search_user"
-    response = requests.post(base_url, {'q' : q})
+    response = requests.post(base_url, {'q': q})
 
     # Check if the response is valid JSON
     try:
@@ -27,9 +27,9 @@ def main():
         if data:
             print("{} {}".format(data.get('id'), data.get('name')))
         else:
-             print("No result")
+            print("No result")
     except ValueError:
-         print("Not a valid JSON")
+        print("Not a valid JSON")
 
 
 if __name__ == "__main__":
