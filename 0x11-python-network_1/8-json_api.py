@@ -25,7 +25,7 @@ def main():
     try:
         data = response.json()
         if data:
-            print("{} {}".format(data.get('id'), data.get('name')))
+            print("[{}] {}".format(data.get('id'), data.get('name')))
         else:
             print("No result")
     except ValueError:
