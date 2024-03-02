@@ -15,11 +15,10 @@ def main():
     when imported
     """
     req = requests.get(argv[1])
-    if req.status_code >= 400:
-        print("Error code: {}".format(req.status_code))
-    elif req.status_code == req.codes.ok:
+    if req.status_code == requests.codes.ok:
         print(req.text)
-
+    elif req.status_code >= 400:
+        print("Error code: {}".format(req.status_code))
 
 if __name__ == "__main__":
     main()
