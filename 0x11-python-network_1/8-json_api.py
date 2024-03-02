@@ -24,13 +24,12 @@ def main():
     # Check if the response is valid JSON
     try:
         data = response.json()
-        if data:
-            print("[{}] {}".format(data['id'], data['name']))
+        if data != "":
+            print("{} {}".format(data['id'], data['name']))
         else:
-            print("No result")
+             print("No result")
     except:
-        print("Not a valid JSON")
-
+         print("Not a valid JSON")
 
 if __name__ == "__main__":
     main()
