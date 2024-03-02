@@ -17,7 +17,7 @@ def main():
     req = requests.get(argv[1])
     if req.status_code >= 400:
         print("Error code: {}".format(req.status_code))
-    else:
+    elif req.status_code == req.codes.ok:
         print(req.text)
 
 
