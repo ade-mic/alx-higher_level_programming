@@ -7,7 +7,8 @@ request(api, function (error, response, body) {
   else if (!error && response.statusCode === 200) {
     const data = JSON.parse(body);
     const movieWithWedge = data.results.filter(movie =>
-      movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/'));
-    console.log(movieWithWedge.length);
+      movie.characters.includes('https://swapi-api.alx-tools.com/api/people/18/'
+      )).length;
+    console.log(movieWithWedge);
   }
 });
