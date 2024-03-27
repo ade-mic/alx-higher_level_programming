@@ -6,24 +6,24 @@ const apiUrl = 'https://swapi.dev/api/films/';
 const movieId = process.argv[2];
 
 // Make a request to the Star Wars API to get the film data
-request(`${apiUrl}${movieId}`, (error, response, body) => {
+request(`${apiUrl}${movieId}`, { json: true }, (error, response, body) => {
   if (error) {
     console.error('An error occurred:', error);
     return;
   }
 
-  const film = JSON.parse(body);
+  const film = body;
 
   // Create a function that will fetch a character name
   const fetchCharacterName = (url, callback) => {
-    request(url, (error, response, body) => {
+    request(url, { json: true }, (error, response, body) => {
       if (error) {
         console.error('An error occurred:', error);
         return;
       }
 
-      const character = JSON.parse(body);
-      callback(character.name);
+      // Access the character name directly from the parsed JSON response
+      callback(body.name);
     });
   };
 
@@ -33,9 +33,5 @@ request(`${apiUrl}${movieId}`, (error, response, body) => {
       console.log(name);
     });
   }
-//   film.characters.forEach((characterUrl) => {
-//     fetchCharacterName(characterUrl, (name) => {
-//       console.log(name);
-//     });
-//   });
 });
+
