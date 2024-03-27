@@ -28,9 +28,14 @@ request(`${apiUrl}${movieId}`, (error, response, body) => {
   };
 
   // Fetch each character's name in the order they appear in the film
-  film.characters.forEach((characterUrl) => {
-    fetchCharacterName(characterUrl, (name) => {
+  for (const char of film.characters) {
+    fetchCharacterName(char, (name) => {
       console.log(name);
     });
-  });
+  }
+//   film.characters.forEach((characterUrl) => {
+//     fetchCharacterName(characterUrl, (name) => {
+//       console.log(name);
+//     });
+//   });
 });
