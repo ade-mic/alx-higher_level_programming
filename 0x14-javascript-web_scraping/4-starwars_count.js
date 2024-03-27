@@ -7,6 +7,6 @@ request(characterUrl, function (error, response, body) {
   else if (!error && response.statusCode === 200) {
     const data = JSON.parse(body);
     const films = data.films;
-    console.log(`${films.length}`);
+    console.log(films.length);
   }
 });
