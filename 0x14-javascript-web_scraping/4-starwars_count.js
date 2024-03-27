@@ -9,8 +9,8 @@ request(api, function (error, response, body) {
     const data = JSON.parse(body);
 
     const res = data.results.filter(movie =>
-      movie.characters.includes(characterUrl))
-    count = res.length 
+      movie.characters.includes(characterUrl));
+    const count = res.length;
     console.log(count);
   }
 });
